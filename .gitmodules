@@ -1,0 +1,3 @@
+[submodule "hide"]
+	path = hide
+	url = git@github.com:HeapsIO/hide.git
