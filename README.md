@@ -29,7 +29,23 @@ Target is to achieve tooling to support: GameDev NW.js SDK Application - [HIDE I
 ### Clone Repo:
 ```sh
 git clone --recurse-submodules git@github.com:lumodon/haxeboiler.git
-cd haxeboiler
+cd haxeboiler/hide
+git remote set-url --push origin no_push
+cd ../
+```
+
+### Install Haxe
+* Install Haxe using appropriate installer from https://haxe.org/download/
+* Install these libraries:
+
+```sh
+haxelib git heaps https://github.com/HeapsIO/heaps
+haxelib git castle https://github.com/ncannasse/castle
+haxelib git hxbit https://github.com/ncannasse/hxbit
+haxelib git hscript https://github.com/HaxeFoundation/hscript
+haxelib git hxnodejs https://github.com/HaxeFoundation/hxnodejs
+haxelib git domkit https://github.com/HeapsIO/domkit
+haxelib git hx3compat https://github.com/HaxeFoundation/hx3compat
 ```
 
 ### Install Windows Make:
@@ -47,10 +63,10 @@ choco install make
     * Paste `%HASHLINKPATH%`
 
 ### Setup NW.js
-(To be written in future commit)
-(link to NW.js)
-(instructions to paste nwjs into bin folder)
-(test make command)
+1. Download [NWjs SDK version](https://nwjs.io/)
+2. Create a new folder with: `mkdir ./hide/bin/nwjs/`
+3. Extract the contents of the folder within `nwjs-sdk-v0.54.1-win-x64` (version may be different) to newly created folder from previous step
+
 
 ### Add Haxe VSCode extension if not using Kode:
 Search `nadako.vshaxe` in Extension marketplace within VSCode
@@ -60,7 +76,11 @@ Search `nadako.vshaxe` in Extension marketplace within VSCode
 make build
 make run
 ```
+
 Running HIDE:
-(To be written in future commit)
+```sh
+make hide-build
+make hide-run
+```
 
 

@@ -6,4 +6,4 @@ hide-build:
 	haxe --cwd hide/ hide.hxml
 	chmod +x ./hide/bin/hide.cmd
 hide-run:
-	bash ./hide/bin/hide.cmd
+	(nohup nice ./hide/bin/hide.cmd &) > /dev/null 2>&1 &
