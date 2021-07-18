@@ -1,5 +1,6 @@
 -cp src
 -lib heaps
--lib hlsdl:11.1.0
+-lib hldx
 -hl bin/app.hl
 -main Main
+-debug
