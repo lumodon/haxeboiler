@@ -1,0 +1,5 @@
+-cp src
+-lib heaps
+-lib hlsdl:11.1.0
+-hl bin/app.hl
+-main Main
