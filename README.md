@@ -34,23 +34,16 @@ git remote set-url --push origin no_push
 cd ../
 ```
 
-### Install Haxe
-* Install Haxe using appropriate installer from https://haxe.org/download/
-* Install these libraries:
-
-```sh
-haxelib git heaps https://github.com/HeapsIO/heaps
-haxelib git castle https://github.com/ncannasse/castle
-haxelib git hxbit https://github.com/ncannasse/hxbit
-haxelib git hscript https://github.com/HaxeFoundation/hscript
-haxelib git hxnodejs https://github.com/HaxeFoundation/hxnodejs
-haxelib git domkit https://github.com/HeapsIO/domkit
-haxelib git hx3compat https://github.com/HaxeFoundation/hx3compat
-```
-
 ### Install Windows Make:
 ```sh
 choco install make
+```
+
+### Install Haxe
+* Install Haxe using appropriate installer from https://haxe.org/download/
+* Install libraries:
+```sh
+make init
 ```
 
 ### Setup HashLink:
@@ -68,16 +61,24 @@ choco install make
 3. Extract the contents of the folder within `nwjs-sdk-v0.54.1-win-x64` (version may be different) to newly created folder from previous step
 
 
-### Add Haxe VSCode extension if not using Kode:
-Search `nadako.vshaxe` in Extension marketplace within VSCode
+### Add VSCode extensions:
+In Extension marketplace within VSCode search and install the following:
+* `nadako.vshaxe`
+* `firefox-devtools.vscode-firefox-debug`
 
 # Build and Run
+### Target HashLink:
 ```sh
 make build
 make run
 ```
 
-Running HIDE:
+### Testing with Web target
+Testing Heaps by compiling to Web target:
+simply press F5 to run vscode's debugger utilizing setup in `.vscode/launch.json`
+
+
+### Running HIDE:
 ```sh
 make hide-build
 make hide-run

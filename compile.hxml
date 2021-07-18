@@ -1,0 +1,5 @@
+-cp src
+-lib heaps
+-js public/bundled/bundle.js
+-main Main
+-debug
